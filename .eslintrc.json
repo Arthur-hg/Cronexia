@@ -1,0 +1,50 @@
+{
+    "plugins": [
+        "prettier",
+        "@typescript-eslint/eslint-plugin",
+        "simple-import-sort"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module"
+    },
+    "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "root": true,
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "prettier/prettier": ["warn", {
+            "singleQuote": true,
+            "trailingComma": "all",
+            "bracketSpacing": true,
+            "tabWidth": 4,
+            "printWidth": 120,
+            "arrowParens": "avoid"
+        }],
+        "@typescript-eslint/interface-name-prefix": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "simple-import-sort/imports": ["error", { "groups": [
+            // Side effect imports.
+            ["^\\u0000"],
+            // Packages.
+            // Things that start with a lowercase letter (or digit or underscore), or `@` followed by a letter.
+            ["^@?[a-z0-9]"],
+            // Components.
+            // Things that start with an uppercase.
+            ["^[A-Z]"],
+            // Absolute imports and other imports such as Vue-style `@/foo`.
+            // Anything that does not start with a dot.
+            ["^[^.]"],
+            // Relative imports.
+            // Anything that starts with a dot.
+            ["^\\."]
+        ]}]
+    }
+}
