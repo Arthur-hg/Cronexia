@@ -9,7 +9,7 @@ Node.JS version used: v18.18.0. It can simply be installed through `nvm install 
 	- `npx tsc`
 
 ## Front end:
-- `npm run server`: The website to run the test can be accessible through `http://localhost:5000/` by default.
+- `npm run server`: The website can be accessible through `http://localhost:5000/`. There is honnestly nothing to see.
 
 ## Back end:
 - `npm run read-files`: This script will execute both async/sync file readers. Name and content of file will be printed.
