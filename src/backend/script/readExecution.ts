@@ -11,7 +11,7 @@ try {
 } catch (error) {}
 
 console.log('\nExecute async script with a correct folder name.');
-const syncResults = await fileReader.getFilesContentInFolderAsync(FOLDER_NAME);
+const syncResults = fileReader.getFilesContentInFolderSync(FOLDER_NAME);
 for (const result of syncResults) {
     console.log(`Name: ${result.name}\nResult : ${result.content}`);
 }
